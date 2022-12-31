@@ -1,9 +1,9 @@
 # Training 5:
 # Caesar cypher for some n-shift
 
-box::use(./lib/map[...])
-box::use(./lib/list[...])
-box::use(./lib/string[...])
+box::use(R/lib/map[...])
+box::use(R/lib/list[...])
+box::use(R/lib/string[...])
 
 caesar_cypher = function(n) {
     frameshifted = c(tail(letters, -n), head(letters, n))
