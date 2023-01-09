@@ -8,6 +8,10 @@ cypher = caesar_cypher(4)
 cypher[' '] = ' '
 cypher[','] = ','
 
-input_chars = collect("zirm, zmhm, zmgm")
+input = "zirm, zmhm, zmgm"
+input_chars = collect(input)
 
-ans_train_05 = getindex.(Ref(cypher), input_chars) |> join
+# a partial function...
+index_cypher = x -> getindex(cypher, x)
+ans_train_05 = map(index_cypher, input_chars) |> join
+
