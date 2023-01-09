@@ -1,5 +1,5 @@
-box::use(./lib/string[...])
-box::use(./lib/map[...])
+box::use(./R/lib/string[...])
+box::use(./R/lib/map[...])
 
 
 cypher = map.define(from = seq(1, length(letters)),
